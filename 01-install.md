@@ -48,13 +48,14 @@ Course material for the bootcamp is currently based on Python version 2.7. Stude
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I installed Python 2.  To my understanding Python 2 is the legacy version.
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I have Python version 2.7.11.  To check the version of Python installed, if one is on an unfamiliar computer, use the command 
+python --version
 
  
 
