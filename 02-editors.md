@@ -68,6 +68,6 @@ I will use Nano.  I looked at all of the terminal editor suggestions and felt mo
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
-I will use Spyder.  That is the graphical editor I started using when learning Python.
+I will use Spyder.  This is the graphical editor I started using when learning Python.
 
  
