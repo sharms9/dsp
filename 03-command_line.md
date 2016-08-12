@@ -63,9 +63,13 @@ ls -Glp = This command lists in long format with the directory names in color an
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
 ls -r = This command lists the content in reverse order (in comparison to "ls").
+
 ls -1 = This command lists the content one per line.
+
 ls -g = This command lists the content in long format, but omits the owner name.
+
 ls -m = This command lists the contents continuously and separated by a comma.
+
 ls -u = This command lists the content by access time.
 
 ---
