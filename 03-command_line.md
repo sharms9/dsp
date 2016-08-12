@@ -80,16 +80,27 @@ ls -u = This command lists the content by access time.
 What does `xargs` do? Give an example of how to use it.
 
 The xargs command reads input from the standard input and executes the command.    The default command executed by xargs is echo.  Standard input is delimited, or separated, by a blank space.  Additionally, blank lines in standard input are ignored.  If no standard input is provided, issuing the xargs command will allow the user to enter data followed by Ctrl-d.  This will output the content entered.
+
 For example:
+
 $ xargs  (The xargs command is issued and prompts the user to enter data)
+
 Hello!   (Text entered, standard input, enter Ctrl-d to exit)
+
 Hello!   (Text outputed, or echo-ed, by issuing the xargs command)
+
 Another example:
+
 $ ls     (List all files in directory "testdir")
+
 test1.txt    test2.txt      (Contents of testdir.)
+
 $ find . -name "*.txt" | xargs rm -rf     (Find where I am now, all content with wildcard .txt in its name and use xargs command to remove those files)
+
 $ ls     (List all files in testdir)
+
 $        (All content with .txt in its name have been removied, testdir is now an empty directory)
+
 The command xargs allowed two actions to be performed with one line of commands.  Files with ".txt" are the standard input and are piped into the xargs command which deletes these files.
 
 
