@@ -42,11 +42,17 @@ What do the following commands do:
 `ls -Glp`  
 
 ls = This command lists the complete contents of a directory.
+
 ls -a = This command lists content with names that begin with a dot.
+
 ls -l = This command lists the contents in long format, and provides full detail on access, size and when it was last updated.
+
 ls -lh = This command lists the contents in long format.  However, unit suffixes are used for size of the file/directory to reduce the number of digits displayed.
+
 ls -lah = This command lists the contents in long format of files that begin with a dot.  Again, unit suffixes are used to condense the digit size.
+
 ls -t = This command lists content names from most recently modified and then alphabetically.
+
 ls -Glp = This command lists in long format with the directory names in color and followed by a forward slash (/).
 
 
