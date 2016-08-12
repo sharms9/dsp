@@ -27,7 +27,7 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 12. mkdir = This command creates a directory.
 13. cat = This command outputs a whole file to the screen without page separation.
 14. less = This command displays the file one page at a time.  Use "q" to exit.
-15. ls -lt | head = This command displays, in long format, recently modified contents.
+15. ls -lt | head = This command displays, in long format, 10 recently modified contents.
 
 ---
 
