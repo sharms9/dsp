@@ -28,7 +28,24 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> A lambda function is a one-statement function that returns something.  For example there is a tuple:
+    tups = [(1,3,-2), (3,2,1), (-1,0,4), (0,-1,3), (-2,6,-5)]
+  I would like to sort this tuple.  This is done by:
+    sorted(tups)
+  The output is:
+    [(-2, 6, -5), (-1, 0, 4), (0, -1, 3), (1, 3, -2), (3, 2, 1)]
+  The tuple is sorted by the first value.  If I would like to sort by the second value, I need to use key to define a function.
+    def sortkey(tup):
+...     return tup[1]
+... 
+    sorted(tups, key = sortkey)
+  The output is:
+    [(0, -1, 3), (-1, 0, 4), (3, 2, 1), (1, 3, -2), (-2, 6, -5)]
+  The tuple is sorted by the second value.  To simplify this process and to save lines and memory, the lambda function is utilized.
+    sorted(tups, key = lambda tup:tup[1])
+  The output is:
+    [(0, -1, 3), (-1, 0, 4), (3, 2, 1), (1, 3, -2), (-2, 6, -5)]
+    
 
 ---
 
