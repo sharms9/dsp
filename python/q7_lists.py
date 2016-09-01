@@ -127,6 +127,29 @@ def remove_adjacent(nums):
     []
     """
     raise NotImplementedError
+    
+#PYTHON CODE FOR remove_adjacent(nums):
+>>> def remove_adjacent(nums):
+...     i = 1
+...     tot_val = len(nums)
+...     while i < tot_val:
+...         if nums[i] == nums[i-1]:
+...             del nums[i]
+...             tot_val = tot_val -1
+...         else:
+...             i += 1
+...     print nums
+... 
+>>> remove_adjacent([1, 2, 2, 3])
+[1, 2, 3]
+>>> remove_adjacent([2, 2, 3, 3, 3])
+[2, 3]
+>>> remove_adjacent([3, 2, 3, 3, 3])
+[3, 2, 3]
+>>> remove_adjacent([])
+[]
+>>> 
+_____________________________________
 
 
 def linear_merge(list1, list2):
