@@ -16,6 +16,34 @@ def match_ends(words):
     1
     """
     raise NotImplementedError
+    
+#PYTHON CODE FOR match_ends(words):
+>>> def match_ends(words):
+...     count = 0
+...     i = 0
+...     list_length = len(words)
+...     while i < list_length:
+...         for i, val in enumerate(words):
+...             if len(val) > 1:
+...                 if words[i][0] == words[i][-1]:
+...                     count += 1
+...                     i += 1
+...                 else:
+...                     count = count
+...                     i = i+1
+...             else:
+...                 count = count
+...                 i += 1        
+...     print count
+... 
+>>> match_ends( [ 'aba', 'xyz', 'aa', 'x', 'bbb' ])
+3
+>>> match_ends([' ', 'x', 'xy', 'xyx', 'xx'])
+2
+>>> match_ends( [ 'aaa', 'be', 'abc', 'hello' ])
+1
+>>> 
+___________________________________________________
 
 
 def front_x(words):
