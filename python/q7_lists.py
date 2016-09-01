@@ -61,7 +61,25 @@ def front_x(words):
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
     raise NotImplementedError
-
+    
+#PYTHON CODE FOR front_x(words):
+>>> def front_x(words):
+...     xwords = [ ]
+...     alpha = [ ]
+...     for val in words:
+...         if val.startswith('x'):
+...             xwords.append(val)
+...         else:
+...             alpha.append(val)
+...     return sorted(xwords) + sorted(alpha)
+... 
+>>> front_x(['bbb', 'ccc', 'axx', 'xzz','xaa'])
+['xaa', 'xzz', 'axx', 'bbb', 'ccc']
+>>> front_x(['ccc', 'bbb', 'aaa', 'axx', 'xcc','xaa'])
+['xaa', 'xcc', 'aaa', 'axx', 'bbb', 'ccc']
+>>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
+['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
+_____________________________________________________________
 
 def sort_last(tuples):
     """
