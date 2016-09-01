@@ -167,3 +167,17 @@ def linear_merge(list1, list2):
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
     raise NotImplementedError
+    
+#PYTHON CODE FOR linear_merge(list1, list2):
+>>> runfile('/Users/swatisharma/Documents/linear_merge.py', wdir='/Users/swatisharma/Documents')
+>>> def linear_merge(list1, list2):
+...     list3 = list1 + list2
+...     print sorted(list3)
+... 
+>>> linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc'])
+['aa', 'bb', 'cc', 'xx', 'zz']
+>>> linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz'])
+['aa', 'bb', 'cc', 'xx', 'zz']
+>>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
+['aa', 'aa', 'aa', 'bb', 'bb']
+>>> 
