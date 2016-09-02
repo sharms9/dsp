@@ -118,4 +118,31 @@ Below is a list of their email addresses.
 Name:  email, dtype: object
 __________________________________
 
+#PYTHON CODE for Q4
+import pandas as pd
+df = pd.read_csv('faculty.csv')
+print
+print 'There are', len(df), 'professors in the Biostats department.'
+print 'Below is a list of the different email domains.'
+print
+df.emails = df[df.columns[3]]
+#print df.emails
+email_domains = map(lambda x: x.split('@')[-1], df.emails)
+#remove email up to @ and keep domain
+c =pd.value_counts(email_domains)
+print c
+
+#OUTPUT for Q4:
+>>> runfile('/Users/swatisharma/Documents/email_domains.py', wdir='/Users/swatisharma/Documents')
+
+There are 37 professors in the Biostats department.
+Below is a list of the different email domains.
+
+mail.med.upenn.edu    23
+upenn.edu             12
+cceb.med.upenn.edu     1
+email.chop.edu         1
+dtype: int64
+_____________________________
+
 
