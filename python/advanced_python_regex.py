@@ -35,3 +35,32 @@ MD       1
 dtype: int64
 __________________________________
 
+#PYTHON CODE for Q2:
+import pandas as pd
+df = pd.read_csv('faculty.csv')
+
+df.title = df[df.columns[2]]
+
+df.title = df.title.apply(lambda d: d.strip().replace('is', 'of'))
+c =pd.value_counts(df.title)
+print
+print 'There are', len(df.title), 'professors in the Biostats department.'
+print
+print 'The title types and tally are:'
+print
+print c
+
+#OUTPUT for Q2:
+>>> runfile('/Users/swatisharma/Documents/find_titles.py', wdir='/Users/swatisharma/Documents')
+
+There are 37 professors in the Biostats department.
+
+The title types and tally are:
+
+Professor of Biostatoftics              13
+Assoftant Professor of Biostatoftics    12
+Associate Professor of Biostatoftics    12
+Name:  title, dtype: int64
+____________________________________________
+
+
