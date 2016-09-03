@@ -29,53 +29,53 @@ How are Python lists and sets similar and different? Give examples of using both
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
 >> A lambda function is a one-statement function that returns something.  For example there is a tuple:
-
-
-    tups = [(1,3,-2), (3,2,1), (-1,0,4), (0,-1,3), (-2,6,-5)]
-    
-    
-  I would like to sort this tuple.  This is done by:
-  
-  
-    sorted(tups)
-    
-    
-  The output is:
-  
-  
-    [(-2, 6, -5), (-1, 0, 4), (0, -1, 3), (1, 3, -2), (3, 2, 1)]
-    
-    
-  The tuple is sorted by the first value.  If I would like to sort by the second value, I need to use key to define a function.
-  
-  
-    def sortkey(tup):
-    
-...     return tup[1]
-
-... 
-    sorted(tups, key = sortkey)
-    
-    
-  The output is:
-  
-  
-    [(0, -1, 3), (-1, 0, 4), (3, 2, 1), (1, 3, -2), (-2, 6, -5)]
-    
-    
-  The tuple is sorted by the second value.  To simplify this process and to save lines and memory, the lambda function is utilized.
-  
-  
-    sorted(tups, key = lambda tup:tup[1])
-    
-    
-  The output is:
-  
-  
-    [(0, -1, 3), (-1, 0, 4), (3, 2, 1), (1, 3, -2), (-2, 6, -5)]
-    
-
----
+>>
+>>
+>>  tups = [(1,3,-2), (3,2,1), (-1,0,4), (0,-1,3), (-2,6,-5)]
+>>  
+>>  
+>>I would like to sort this tuple.  This is done by:
+>>
+>>
+>>  sorted(tups)
+>>  
+>>  
+>>The output is:
+>>
+>>
+>>  [(-2, 6, -5), (-1, 0, 4), (0, -1, 3), (1, 3, -2), (3, 2, 1)]
+>>  
+>>  
+>>The tuple is sorted by the first value.  If I would like to sort by the second value, I need to use key to define a function.
+>>
+>>
+>>  def sortkey(tup):
+>>  
+>>...     return tup[1]
+>>
+>>... 
+>>  sorted(tups, key = sortkey)
+>>  
+>>  
+>>The output is:
+>>
+>>
+>>  [(0, -1, 3), (-1, 0, 4), (3, 2, 1), (1, 3, -2), (-2, 6, -5)]
+>>  
+>>  
+>>The tuple is sorted by the second value.  To simplify this process and to save lines and memory, the lambda function is utilized.
+>>
+>>
+>>  sorted(tups, key = lambda tup:tup[1])
+>>  
+>>  
+>>The output is:
+>>
+>>
+>>  [(0, -1, 3), (-1, 0, 4), (3, 2, 1), (1, 3, -2), (-2, 6, -5)]
+>> 
+>>
+>>---
 
 ###Q4. List Comprehension, Map &amp; Filter
 
@@ -83,89 +83,83 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> List comprehensions provide a way to create lists.  Typical applications are to make new lists where each element is the result of some operations applied to each member of another sequence.
 
->>> squares = [ ]
-
->>> for x in range (10):
-
->>>     squares.append(x**2)
-
- 
-
->>> squares
-
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
->>> 
-
->>> # using a list comprehension:
-
- 
-
->>> squares = [x**2 for x in range (10)]
-
->>> squares
-
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
-A list comprehension consists of brackets containing an expression followed by for or if.  This results in a new list from evaluating the expression in the brackets.  The map function applies a function to every member of an iterable and returns the result.
-
->>> def square(x):
-
->>>     return x**2
->>>
-
->>> squares = map(square, range(10))
-
->>> print squares
-
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
-Lambda and map can be used together.
-
->>> squares = map(lambda x:x**2, range(10))
-
->>> print squares
-
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
-Filter takes a function returning True or False and applies it to a sequence.  A list of members for which the function returned True are returned in the list.  Lambda can also be used with the filter function.  We will filter the list of squares according to wheter the entries are >5 and <50.
-
->>> squares = map(lambda x:x**2, range(10))
-
->>> special_squares = filter(lambda x:x>5 and x<50, squares)
-
->>> print special_squares
-
-[9, 16, 25, 36, 49]
-
-Set comprehensions have similar syntax as list comprehensions and consist of values
-
->>> a_set = set(range(10))
-
->>> a_set
-
-set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-
->>> 
-
->>> {x**2 for x in a_set}
-
-set([0, 1, 4, 81, 64, 9, 16, 49, 25, 36])
-
-Set comprehension can use if to filter the values before returning it in the result set.
-
->>> {x for x in a_set if x%2 == 0}
-
-set([0, 8, 2, 4, 6])
-
-Dictionary comprehensions are also like list comprehensions but a dictionary is created instead of a list.  A dictionary comprehension uses curly braces instead of square brackets.  A single expression actually consists of two expressions separated by a colon.  Before the colon is the dictionary key and after the colon is the value.  Also a dictionary comprehension returns a dictionary.  This example takes dictionary a_dict and switches the key and value.
-
->>> a_dict = {'a':1, 'b':2, 'c':3}
-
->>> {value:key for key, value in a_dict.items()}
-
-{1: 'a', 2: 'b', 3: 'c'}
-
+>> squares = [ ]
+>>
+>> for x in range (10):
+>>
+>>     squares.append(x**2)
+>>
+>> squares
+>>
+>>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>
+>> # using a list comprehension:
+>>
+>> squares = [x**2 for x in range (10)]
+>>
+>> squares
+>>
+>>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>
+>>A list comprehension consists of brackets containing an expression followed by for or if.  This results in a new list from evaluating the expression in the brackets.  The map function applies a function to every member of an iterable and returns the result.
+>>
+>> def square(x):
+>>
+>>     return x**2
+>>
+>>
+>> squares = map(square, range(10))
+>>
+>> print squares
+>>
+>>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>
+>>Lambda and map can be used together.
+>>
+>> squares = map(lambda x:x**2, range(10))
+>>
+>> print squares
+>>
+>>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>
+>>Filter takes a function returning True or False and applies it to a sequence.  A list of members for which the function returned True are returned in the list.  Lambda can also be used with the filter function.  We will filter the list of squares according to wheter the entries are >5 and <50.
+>>
+>> squares = map(lambda x:x**2, range(10))
+>>
+>> special_squares = filter(lambda x:x>5 and x<50, squares)
+>>
+>> print special_squares
+>>
+>>[9, 16, 25, 36, 49]
+>>
+>>Set comprehensions have similar syntax as list comprehensions and consist of values
+>>
+>> a_set = set(range(10))
+>>
+>> a_set
+>>
+>>set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>
+>> 
+>>
+>> {x**2 for x in a_set}
+>>
+>>set([0, 1, 4, 81, 64, 9, 16, 49, 25, 36])
+>>
+>>Set comprehension can use if to filter the values before returning it in the result set.
+>>
+>> {x for x in a_set if x%2 == 0}
+>>
+>>set([0, 8, 2, 4, 6])
+>>
+>>Dictionary comprehensions are also like list comprehensions but a dictionary is created instead of a list.  A dictionary comprehension uses curly braces instead of square brackets.  A single expression actually consists of two expressions separated by a colon.  Before the colon is the dictionary key and after the colon is the value.  Also a dictionary comprehension returns a dictionary.  This example takes dictionary a_dict and switches the key and value.
+>>
+>> a_dict = {'a':1, 'b':2, 'c':3}
+>>
+>> {value:key for key, value in a_dict.items()}
+>>
+>>{1: 'a', 2: 'b', 3: 'c'}
+>>
 
 
 ---
