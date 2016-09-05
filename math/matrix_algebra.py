@@ -355,11 +355,12 @@ import numpy as np
 
 B = np.array([[1,-1],[0,1]])
 
-matmul1 = B.dot(B)
-matmul2 = matmul1.dot(matmul1)
+#matmul1 = B.dot(B)
+#matmul2 = matmul1.dot(matmul1)
+matpow = np.linalg.matrix_power(B,4)
 print
 print 'B^4 ='
-print matmul2
+print matpow
 print
 
 # Output for 3.8):
