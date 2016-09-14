@@ -54,6 +54,7 @@ Cohen's D is an example of effect size.  Other examples of effect size are:  cor
 You will see effect size again and again in results of algorithms that are run in data science.  For instance, in the bootcamp, when you run a regression analysis, you will recognize the t-statistic as an example of effect size.
 
 >> please check sharms9/ThinkStats2/code/Exercise2-4_solution.ipynb for file Exercise2-4_solution.ipynb
+>>
 >> The Cohen's d for total weight (comparison of first and subsequent births) is -0.0889 and for pregnancy lengths (for first and subsequent births) is 0.0289.  Mean weight for subsequent births is greater than for first borns. However, mean pregnancy length for the first born is greater than for subsequent births.  Essentially, first borns typically weigh less and the mother has a longer pregnancy.  Other children born typically weigh more and the mother has a shorter pregnancy.
 
 
