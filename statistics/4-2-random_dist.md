@@ -1,3 +1,4 @@
 [Think Stats Chapter 4 Exercise 2](http://greenteapress.com/thinkstats2/html/thinkstats2005.html#toc41) (a random distribution)
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Please see https://github.com/sharms9/dsp/blob/master/Exercise4-2_solution.ipynb
+>>
